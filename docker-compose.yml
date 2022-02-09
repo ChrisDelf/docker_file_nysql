@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  mysql_server:
+    image: mysql:8.0
+    volumes: 
+      - /var/lib/mysql
+   
+    environment:
+      - MYSQL_DATABASE=musicdb
+      - MYSQL_USER=postgres
+      - MYSQL_ROOT_PASSWORD=derpo
+      - MYSQL_PASSWORD=derpo
+
+    ports:
+      - "3306:3306"
+
+
